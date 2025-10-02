@@ -33,4 +33,4 @@ Built using **HTML, CSS, JavaScript, Chart.js, and LocalStorage**, this app help
 
 1. Clone this repository or download the files.  
    ```bash
-   git clone https://github.com/yourusername/finance-tracker.git
+   git clone https://siddharth003s.github.io/Personal-Finance-Tracker/
