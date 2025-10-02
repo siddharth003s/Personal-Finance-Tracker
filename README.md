@@ -12,8 +12,8 @@ Built using **HTML, CSS, JavaScript, Chart.js, and LocalStorage**, this app help
 -  Sort transactions by amount or date  
 -  Summary section with Total Income, Expense, and Balance  
 -  Visual Insights  
-  - Income vs Expense bar indicator  
-  - Pie chart powered by Chart.js  
+  -- Income vs Expense bar indicator  
+  -- Pie chart powered by Chart.js  
 -  Data Persistence using LocalStorage (transactions saved across sessions)  
 -  Form Validation (no empty descriptions, positive amounts only)  
 -  Responsive Design (works on desktop and mobile)  
