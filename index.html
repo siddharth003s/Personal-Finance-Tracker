@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Finance Tracker</title>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Personal Finance Tracker</h1>
+        </header>
+
+        <!-- ===========================
+             Transaction Form
+        ============================ -->
+        <section class="form-section">
+            <h2>Add Transaction</h2>
+            <form id="transaction-form">
+                <input type="text" id="desc" placeholder="Description" required />
+                <input type="number" id="amount" placeholder="Amount" required />
+                <select id="type">
+                    <option value="Income">Income</option>
+                    <option value="Expense">Expense</option>
+                </select>
+                <input type="date" id="date" required />
+                <button type="submit" id="submit">Add</button>
+                <p id="error" class="error"></p>
+            </form>
+        </section>
+
+        <!-- ===========================
+             Controls
+        ============================ -->
+        <section class="controls">
+            <label for="filter">Filter:</label>
+            <select id="filter">
+                <option value="All">All</option>
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
+            </select>
+
+            <label for="sort">Sort:</label>
+            <select id="sort">
+                <option value="date-desc">Date (Newest)</option>
+                <option value="date-asc">Date (Oldest)</option>
+                <option value="amount-asc">Amount (Low → High)</option>
+                <option value="amount-desc">Amount (High → Low)</option>
+            </select>
+        </section>
+
+        <!-- ===========================
+             Transaction List
+        ============================ -->
+        <section class="transaction-list">
+            <h2>Transactions List</h2>
+            <table id="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- ===========================
+             Summary
+        ============================ -->
+        <section class="summary">
+            <h2>Summary</h2>
+            <p>Income: <span id="Income">0</span></p>
+            <p>Expense: <span id="Expense">0</span></p>
+            <p>Balance: <span id="balance">0</span></p>
+        </section>
+
+        <!-- ===========================
+             Charts
+        ============================ -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <section class="chart">
+            <h2>Insights</h2>
+            <div id="chart">
+                <div id="income-bar"></div>
+                <div id="expense-bar"></div>
+            </div>
+            <canvas id="pieChart"></canvas>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

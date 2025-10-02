@@ -1,0 +1,199 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ededee;
+    color: #333;
+    line-height: 1.8;
+}
+
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fbf6f6;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #0f4b74;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+form input, form select, form button {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+form input, form select {
+    flex: 1;
+}
+
+form button {
+    background-color: #0f4b74;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+form button:hover {
+    background: #3498db;
+    transform: scale(1.1);
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-section h2 {
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #0f4b74;
+    color: white;
+}
+
+td {
+    background-color: #fafafa;
+}
+
+tr:hover td {
+    background-color: #c9ecfe;
+    transition: background 0.3s ease;
+}
+
+.summary {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.summary p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#Income {
+    color: green;
+}
+#Expense {
+    color: red;
+}
+#balance {
+    color: #2c3e50;
+}
+
+.chart-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    text-align: center;
+    color: #777;
+    border-radius: 8px;
+}
+
+#chart {
+    width: 100%;
+    display: flex;
+}
+#income-bar {
+    background: green;
+    height: 20px;
+    transition: width 0.5s ease;
+}
+#expense-bar {
+    background: red;
+    height: 20px;
+    transition: width 0.5s ease;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart canvas {
+  width: 100% !important;
+  height: 400px !important;   /* desktop size */
+}
+
+@media (max-width:600px) {
+  .chart canvas {
+    width: 250px !important;
+    height: 250px !important;  /* smaller on mobile */
+  }
+}
+
+#pieChart {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    #pieChart {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+    }
+    .summary {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
